@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.title = "User Nominated Restaurants";
+}
+
+
+@model IEnumerable<string>
+
+
+<br />
+<br />
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">User-Nominated Restaurants</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+            @if (Model is null)
+            {
+                <h1>Nothing here yet...</h1>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            }
+            else
+            {
+                @foreach (string s in Model)
+                {
+                    <h3>@s</h3>
+                }
+
+            }
+
+            <!--
+    <div class="col-md-6 col-lg-4 mb-5">
+        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <div style="margin: 25px;">
+                <h3></h3>
+                <p>
+                    Category -
+                </p>
+                <p>Year - </p>
+                <p>Director - </p>
+                <p>Edited -</p>
+                <p>Lent to: </p>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+            -->
+        </div>
+    </div>
+</section>
+
