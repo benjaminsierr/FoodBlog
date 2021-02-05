@@ -56,7 +56,7 @@ namespace FoodBlog.Models
             {
                 Rank = 4,
                 Name = "Brick Oven Pizza",
-                FavDish = "Italiano Roman Pizza",
+                FavDish = null,
                 Address = "85 W 800 N",
                 Phone = 8014444444,
                 Url = "https://communalrestaurant.getbento.com/"
@@ -69,7 +69,7 @@ namespace FoodBlog.Models
                 FavDish = "",
                 Address = "A Truck Stand",
                 Phone = 8015555555,
-                Url = "https://communalrestaurant.getbento.com/"
+                Url = null
             };
 
 
