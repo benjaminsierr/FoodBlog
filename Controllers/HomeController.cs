@@ -18,7 +18,7 @@ namespace FoodBlog.Controllers
             _logger = logger;
         }
 
-        List<UserRestaurant> userList = new List<UserRestaurant>();
+        
         public IActionResult Index()
         {
             List<string> restaurantList = new List<string>();
@@ -48,12 +48,12 @@ namespace FoodBlog.Controllers
             }
             else
             {
-                userList.Add(userRestaurant);
+                UserRestaurant.addRestaurant(userRestaurant);
                 List<string> userRestaurantList = new List<string>();
-                foreach (UserRestaurant r in userList)
+                foreach (UserRestaurant r in UserRestaurant.userList)
                 {
                     //if there is no favorite dish return everything is tasty
-                    string dish = (r.FavDish == "") ? "It's all tasty" : "Favorite Dish: " + r.FavDish;
+                    string dish = (r.FavDish == "" or r.FavDish is null) ? "It's all tasty" : r.FavDish;
 
                     userRestaurantList.Add($"{r.UserName}, {r.Name},Favorite Dish: {dish}");
 
@@ -65,10 +65,10 @@ namespace FoodBlog.Controllers
         public IActionResult UserPage()
         {
             List<string> userRestaurantList = new List<string>();
-            foreach (UserRestaurant r in userList)
+            foreach (UserRestaurant r in UserRestaurant.userList)
             {
                 //if there is no favorite dish return everything is tasty
-                string dish = (r.FavDish == "") ? "It's all tasty" : "Favorite Dish: " + r.FavDish;
+                string dish = (r.FavDish == "") ? "It's all tasty" : r.FavDish;
                 
                 userRestaurantList.Add($"{r.UserName}, {r.Name},Favorite Dish: {dish}");
                 

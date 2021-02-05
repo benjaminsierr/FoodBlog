@@ -13,11 +13,12 @@ namespace FoodBlog.Models
         [Required]
         public string Name { get; set; }
         public string FavDish { get; set; }
-        
-        public static UserRestaurant[] GetUserRestaurants()
-        {
 
-            return new UserRestaurant[] { null };
+        public static List<UserRestaurant> userList = new List<UserRestaurant>();
+
+        public static void addRestaurant(object obj)
+        {
+            userList.Add((UserRestaurant)obj);
         }
     }
 }
