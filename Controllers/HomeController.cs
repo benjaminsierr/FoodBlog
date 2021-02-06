@@ -56,7 +56,7 @@ namespace FoodBlog.Controllers
                     //if there is no favorite dish return everything is tasty
                     string dish = (r.FavDish == "" ^ r.FavDish is null) ? "It's all tasty" : r.FavDish;
 
-                    userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}");
+                    userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}, {r.Phone}");
 
                 }
                 return View("UserPage", userRestaurantList);
@@ -70,7 +70,7 @@ namespace FoodBlog.Controllers
             {
                 //if there is no favorite dish return everything is tasty
                 string dish = (r.FavDish == "") ? "It's all tasty" : r.FavDish;
-                userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}");
+                userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}, {r.Phone}");
                 
             }
             return View(userRestaurantList);

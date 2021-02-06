@@ -45,6 +45,13 @@
                             <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.FavDish)</div>
                         </div>
                     </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label asp-for="Phone">Your Favorite Dish</label>
+                            <input class="form-control" asp-for="Phone" id="phone" name="phone" type="tel" placeholder="Phone Number" />
+                            <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.Phone)</div>
+                        </div>
+                    </div>
                     <br />
                     <div id="success"></div>
                     <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Submit</button></div>
