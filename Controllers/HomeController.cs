@@ -48,17 +48,20 @@ namespace FoodBlog.Controllers
             }
             else
             {
-                UserRestaurant.addRestaurant(userRestaurant);
-                List<string> userRestaurantList = new List<string>();
-                foreach (UserRestaurant r in UserRestaurant.userList)
-                {
+                //UserRestaurant.addRestaurant(userRestaurant);
+                //List<string> userRestaurantList = new List<string>();
+                //foreach (UserRestaurant r in UserRestaurant.userList)
+                //{
                     //if there is no favorite dish return everything is tasty
-                    string dish = (r.FavDish == "" ^ r.FavDish is null) ? "It's all tasty" : r.FavDish;
+                  //  string dish = (r.FavDish == "" ^ r.FavDish is null) ? "It's all tasty" : r.FavDish;
 
-                    userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}, {r.Phone}");
+ //                   userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}, {r.Phone}");
+ 
+ //               }
 
-                }
-                return View("UserPage", userRestaurantList);
+                RestaurantList.AddRestaurant(userRestaurant);
+
+                return View("UserPage", RestaurantList.UserRestaurants);
             }
         }
 
@@ -74,7 +77,7 @@ namespace FoodBlog.Controllers
             }
             return View(userRestaurantList);
         }
-            
+           
 
         public IActionResult Privacy()
         {

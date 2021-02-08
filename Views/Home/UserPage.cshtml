@@ -3,7 +3,7 @@
 }
 
 
-@model IEnumerable<string>
+@model IEnumerable<FoodBlog.Models.UserRestaurant>
 
 
 <br />
@@ -41,9 +41,10 @@
             }
             else
             {
-                @foreach (string s in Model)
+                @foreach (FoodBlog.Models.UserRestaurant r in Model)
                 {
-                    <h3>@s</h3>
+                    <h3>@r.Name, @r.UserName, @r.Phone, @r.FavDish </h3>
+                    <br />
                 }
 
             }

@@ -15,10 +15,10 @@ namespace FoodBlog.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string FavDish { get; set; }
+        public string? FavDish { get; set; }
         public string Address { get; set; }
         [Phone]
-        public long Phone { get; set; }
+        public long? Phone { get; set; }
         public string? Url { get; set; } = "Coming Soon";
 
         public static Restaurant[] GetRestaurants()
