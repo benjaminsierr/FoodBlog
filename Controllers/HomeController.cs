@@ -27,8 +27,7 @@ namespace FoodBlog.Controllers
                 //if there is no favorite dish return everything is tasty
                 string dish = (r.FavDish == "" ^ r.FavDish is null) ? "It's all tasty" : "Signiture Dish: " + r.FavDish;
                 //if there is no url pass in "Coming Soon"
-                string site = (r.Url == "" ^ r.Url is null) ? "Coming Soon" : r.Url;
-                restaurantList.Add($"#{r.Rank}: {r.Name}, {dish}, {r.Address} ,{r.Phone}, {site}   ");
+                restaurantList.Add($"#{r.Rank}: {r.Name}, {dish}, {r.Address} ,{r.Phone}, {r.Url}   ");
 
             }
             return View(restaurantList);

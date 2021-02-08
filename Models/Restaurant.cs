@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace FoodBlog.Models
     public class Restaurant
     {
         [Required]
+        [Editable(false)]
         public int Rank { get; set; }
         [Required]
         public string Name { get; set; }
@@ -17,7 +19,7 @@ namespace FoodBlog.Models
         public string Address { get; set; }
         [Phone]
         public long Phone { get; set; }
-        public string Url { get; set; }
+        public string? Url { get; set; } = "Coming Soon";
 
         public static Restaurant[] GetRestaurants()
         {
@@ -69,7 +71,6 @@ namespace FoodBlog.Models
                 FavDish = "",
                 Address = "A Truck Stand",
                 Phone = 8015555555,
-                Url = null
             };
 
 
