@@ -13,6 +13,7 @@ namespace FoodBlog.Models
         [Required]
         public string Name { get; set; }
         public string FavDish { get; set; }
+        [Required]
         [RegularExpression(@"^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$",
             ErrorMessage = "Please enter a valid phone number")]
         public string Phone { get; set; }
