@@ -68,7 +68,7 @@ namespace FoodBlog.Models
             {
                 Rank = 5,
                 Name = "J Dawgs",
-                FavDish = "",
+                FavDish = null,
                 Address = "A Truck Stand",
                 Phone = 8015555555,
             };
