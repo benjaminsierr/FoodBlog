@@ -71,6 +71,7 @@ namespace FoodBlog.Models
                 FavDish = "",
                 Address = "A Truck Stand",
                 Phone = 8015555555,
+                Url = "https://communalrestaurant.getbento.com/"
             };
 
 

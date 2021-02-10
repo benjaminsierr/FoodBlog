@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FoodBlog.Models
 {
-    public class RestaurantList
+    public static class RestaurantList
     {
         private static List<UserRestaurant> userRestaurants = new List<UserRestaurant>();
 

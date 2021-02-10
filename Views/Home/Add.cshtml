@@ -6,50 +6,43 @@
 }
 
 @model FoodBlog.Models.UserRestaurant
-<!-- Contact Section-->
 <br />
 <br />
-<section class="page-section" id="contact">
+<section class="page-section">
     <div class="container">
-        <!-- Contact Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"> Add your own Restaurant</h2>
-        <!-- Icon Divider-->
         <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
+        <br />
         </div>
-        <!-- Contact Section Form-->
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                <form id="contactForm" name="sentMessage" novalidate="novalidate" method="post">
+                <form id="contactForm" name="sentMessage" method="post">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label asp-for="UserName">Your Name</label>
                             <input class="form-control" asp-for="UserName" id="title" name="UserName" type="text" placeholder="Your name" />
-                            <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.UserName)</div>
+                            <div class="text-danger">@Html.ValidationMessageFor(model => model.UserName)</div>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label asp-for="Name">Restaurant Name</label>
                             <input class="form-control" asp-for="Name" id="title" name="Name" type="text" placeholder="Restaurant Name" />
-                            <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.Name)</div>
+                            <div class="text-danger">@Html.ValidationMessageFor(model => model.Name)</div>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label asp-for="FavDish">Your Favorite Dish</label>
                             <input class="form-control" asp-for="FavDish" id="FavDish" name="FavDish" type="text" placeholder="Your Favorite Dish" />
-                            <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.FavDish)</div>
+                            <div class="text-danger">@Html.ValidationMessageFor(model => model.FavDish)</div>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label asp-for="Phone">Your Favorite Dish</label>
+                            <label asp-for="Phone">Phone Number</label>
                             <input class="form-control" asp-for="Phone" id="phone" name="phone" type="tel" placeholder="Phone Number" />
-                            <div style="font-style: italic; font-size: .9rem; color: #ff0000;">@Html.ValidationMessageFor(model => model.Phone)</div>
+                            <div class="text-danger">@Html.ValidationMessageFor(model => model.Phone)</div>
                         </div>
                     </div>
                     <br />

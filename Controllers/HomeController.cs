@@ -67,15 +67,8 @@ namespace FoodBlog.Controllers
 
         public IActionResult UserPage()
         {
-            List<string> userRestaurantList = new List<string>();
-            foreach (UserRestaurant r in UserRestaurant.userList)
-            {
-                //if there is no favorite dish return everything is tasty
-                string dish = (r.FavDish == "") ? "It's all tasty" : r.FavDish;
-                userRestaurantList.Add($"{r.UserName}, {r.Name}, Favorite Dish: {dish}, {r.Phone}");
-                
-            }
-            return View(userRestaurantList);
+       
+            return View(RestaurantList.UserRestaurants);
         }
            
 
