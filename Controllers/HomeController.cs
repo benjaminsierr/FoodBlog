@@ -25,7 +25,7 @@ namespace FoodBlog.Controllers
             foreach(Restaurant r in Restaurant.GetRestaurants())
             {
                 //if there is no favorite dish return everything is tasty
-                string dish = (r.FavDish == "" ^ r.FavDish is null) ? "It's all tasty" : "Signiture Dish: " + r.FavDish;
+                string? dish = r.FavDish ?? "It's all tasty!";
                 //if there is no url pass in "Coming Soon"
                 restaurantList.Add($"#{r.Rank}: {r.Name}, {dish}, {r.Address} ,{r.Phone}, {r.Url}   ");
 
