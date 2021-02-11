@@ -9,9 +9,12 @@ namespace FoodBlog.Models
 {
     public class Restaurant
     {
+        public Restaurant(int rank)
+        {
+            Rank = rank;
+        }
         [Required]
-        [Editable(false)]
-        public int Rank { get; set; }
+        public int Rank { get; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -24,9 +27,8 @@ namespace FoodBlog.Models
         public static Restaurant[] GetRestaurants()
         {
 
-            Restaurant r1 = new Restaurant
+            Restaurant r1 = new Restaurant(1)
             {
-                Rank = 1,
                 Name = "K's Kitchen",
                 FavDish = "Katsu Curry",
                 Address = "322 W Center St",
@@ -34,9 +36,8 @@ namespace FoodBlog.Models
                 Url = "http://ksjapanesekitchen.com/menu/"
             };
 
-            Restaurant r2 = new Restaurant
+            Restaurant r2 = new Restaurant(2)
             {
-                Rank = 2,
                 Name = "Station 22",
                 FavDish = "Chicken & Waffles",
                 Address = "204 Center St",
@@ -44,9 +45,8 @@ namespace FoodBlog.Models
                 Url = "https://station22cafe.getbento.com/menus/"
             };
 
-            Restaurant r3 = new Restaurant
+            Restaurant r3 = new Restaurant(3)
             {
-                Rank = 3,
                 Name = "Communal",
                 FavDish = "Fillet Mignon",
                 Address = "1234 University Ave",
@@ -54,9 +54,8 @@ namespace FoodBlog.Models
                 Url = "https://communalrestaurant.getbento.com/"
             };
 
-            Restaurant r4 = new Restaurant
+            Restaurant r4 = new Restaurant(4)
             {
-                Rank = 4,
                 Name = "Brick Oven Pizza",
                 FavDish = null,
                 Address = "85 W 800 N",
@@ -64,9 +63,8 @@ namespace FoodBlog.Models
                 Url = "https://communalrestaurant.getbento.com/"
             };
 
-            Restaurant r5 = new Restaurant
+            Restaurant r5 = new Restaurant(5)
             {
-                Rank = 5,
                 Name = "J Dawgs",
                 FavDish = null,
                 Address = "A Truck Stand",
